@@ -1,0 +1,421 @@
+#include "stdafx.h"
+#include <stdio.h>
+#include<Windows.h>
+#include <stdlib.h>     
+#include <glut.h>  
+#include <math.h>  
+#include<string.h>
+float kk=10.0,ll=0.0,rr=0.0;
+int radius1=6,xh,yh,view=0;;
+float angle1=1.0;
+void object();
+float m=0;
+GLfloat x1=500;
+GLfloat a=1.001,carX=.1,x=50,y=150; 
+float radius=5,radiusC=3;
+void Road();
+void Update(int value)
+{
+	glutTimerFunc(0.01,Update,0);
+	glutPostRedisplay();
+}
+
+void Road()
+    {
+	glBegin(GL_QUADS);
+    glColor3f(.5,.5,.5);
+    glVertex2f(0,100);
+    glVertex2f(0,150);
+    glVertex2f(1000,150);
+    glVertex2f(1000,100);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3f(.5,.5,.5);
+    glVertex2f(0,200);
+    glVertex2f(0,250);
+    glVertex2f(1000,250);
+    glVertex2f(1000,200);
+    glEnd();
+	glBegin(GL_QUADS);
+    glColor3f(.5,.5,.5);
+    glVertex2f(0,300);
+    glVertex2f(0,350);
+    glVertex2f(1000,350);
+    glVertex2f(1000,300);
+    glEnd();
+	glBegin(GL_QUADS);
+    glColor3f(.5,.5,.5);
+    glVertex2f(0,400);
+    glVertex2f(0,450);
+    glVertex2f(1000,450);
+    glVertex2f(1000,400);
+    glEnd();
+	glBegin(GL_QUADS);
+    glColor3f(.5,.5,.5);
+    glVertex2f(0,500);
+    glVertex2f(0,550);
+    glVertex2f(1000,550);
+    glVertex2f(1000,500);
+    glEnd();
+	glBegin(GL_QUADS);
+    glColor3f(.5,.5,.5);
+    glVertex2f(0,600);
+    glVertex2f(0,650);
+    glVertex2f(1000,650);
+    glVertex2f(1000,600);
+    glEnd();
+	glBegin(GL_QUADS);
+    glColor3f(.5,.5,.5);
+    glVertex2f(0,700);
+    glVertex2f(0,750);
+    glVertex2f(1000,750);
+    glVertex2f(1000,700);
+    glEnd();
+	glFlush();
+    }
+ 
+ void car(int px,int py,float color,float l,float r,int k)
+       {
+    	 glPointSize(5);
+         float angle,x1;
+    	 float x2,y2;
+    	 x1=x+px+10;
+
+if(k==180)		
+	printf("%f\n",x1);
+		 
+	//	printf("%f",ll);
+	
+		if(((x1>=1327.32-l-r && x1<=1331.84-l-r) ||(x1>=1338.3-l-r && x1<=1343.8-l-r)||( x1>=2104.7-l-r && x1<=2106.8-l-r)||(x1>=2103.7-l-r && x1<=2105.8-l-r)) && (((kk>=50)&&(kk<=100)) &&(py==590))) 
+ {MessageBox(NULL,L"G A M E   O V E R",L"Crossy Road",1);
+exit (0);
+}
+		
+		
+		if(((x1>=1327.32-l-r && x1<=1331.84-l-r) ||(x1>=1338.3-l-r && x1<=1343.8-l-r)||( x1>=2104.7-l-r && x1<=2106.8-l-r)||(x1>=2103.7-l-r && x1<=2105.8-l-r)) && (((kk>=150)&&(kk<=200)) &&(py==490))) 
+ {MessageBox(NULL,L"G A M E   O V E R",L"Crossy Road",1);
+exit (0);
+}
+		
+		
+			
+		if(((x1>=1327.32-l-r && x1<=1331.84-l-r) ||(x1>=1338.3-l-r && x1<=1343.8-l-r)||( x1>=2104.7-l-r && x1<=2106.8-l-r)||(x1>=2103.7-l-r && x1<=2105.8-l-r)) && (((kk>=250)&&(kk<=300)) &&(py==390))) 
+ {MessageBox(NULL,L"G A M E   O V E R",L"Crossy Road",1);
+exit (0);
+}
+
+					
+		if(((x1>=1327.32-l-r && x1<=1331.84-l-r) ||(x1>=1338.3-l-r && x1<=1343.8-l-r)||( x1>=2104.7-l-r && x1<=2106.8-l-r)||(x1>=2103.7-l-r && x1<=2105.8-l-r)) && (((kk>=350)&&(kk<=400)) &&(py==290))) 
+ {MessageBox(NULL,L"G A M E   O V E R",L"Crossy Road",1);
+exit (0);
+}
+					
+		if(((x1>=1327.32-l-r && x1<=1331.84-l-r) ||(x1>=1338.3-l-r && x1<=1343.8-l-r)||( x1>=2104.7-l-r && x1<=2106.8-l-r)||(x1>=2103.7-l-r && x1<=2105.8-l-r)) && (((kk>=450)&&(kk<=500)) &&(py==190))) 
+ {MessageBox(NULL,L"G A M E   O V E R",L"Crossy Road",1);
+exit (0);
+}
+					
+		if(((x1>=1327.32-l-r && x1<=1331.84-l-r) ||(x1>=1338.3-l-r && x1<=1343.8-l-r)||( x1>=2104.7-l-r && x1<=2106.8-l-r)||(x1>=2103.7-l-r && x1<=2105.8-l-r)) && (((kk>=550)&&(kk<=600)) &&(py==90))) 
+ {MessageBox(NULL,L"G A M E   O V E R",L"Crossy Road",1);
+exit (0);
+}
+		
+					
+		if(((x1>=1327.32-l-r && x1<=1331.84-l-r) ||(x1>=1338.3-l-r && x1<=1343.8-l-r)||( x1>=2104.7-l-r && x1<=2106.8-l-r)||(x1>=2103.7-l-r && x1<=2105.8-l-r)) && (((kk>=650)&&(kk<=700)) &&(py==-10))) 
+ {MessageBox(NULL,L"G A M E   O V E R",L"Crossy Road",1);
+exit (0);
+}
+if(kk>730)
+	{MessageBox(NULL,L"W I N N E R!!!!",L"Crossy Road",1);
+exit (0);
+}
+		
+		glBegin(GL_POLYGON);
+    	glColor3f(0+color,+color,10+color);
+     		glVertex2f(x+px-8,y+py-4);//9
+			glVertex2f(x+px+30,y+py-4);//8
+			glVertex2f(x+px+30,y+py-10);//7
+            glVertex2f(x+px+18,y+py-25);//6
+	        glVertex2f(x+px+5,y+py-25);//5		
+	        glVertex2f(x+px-8,y+py-12);//4
+	        glVertex2f(x+8+px,y+py-25);//3
+	        glVertex2f(x+px+22,y-4+py);//2
+			glVertex2f(x+px,y+py-4);//1
+	    glEnd();
+
+         glBegin(GL_POLYGON);
+    	 glColor3f(0,0,0);
+     
+		 for (angle=1.0f;angle<360.0f;angle+=0.2)
+             {
+               x2 =x1-10+sin(angle)*radiusC;
+               y2 = y+py-1+cos(angle)*radiusC;
+               glVertex2f(x2,y2);
+             }
+    	 glEnd();
+
+    	  glBegin(GL_POLYGON);
+    	  for (angle=1.0f;angle<360.0f;angle+=0.2)
+             {
+               x2 =x1+12+sin(angle)*radiusC;
+               y2 = y+py-1+cos(angle)*radiusC;
+               glVertex2f(x2,y2);
+             }
+         glEnd();
+		 glFlush();
+		 x=x+carX;
+         if(x>2000)
+    	 x=0;
+    	}
+		 
+ void Sphere(int l,int r,int k)
+	    {
+		glColor3f(0,0,1);
+	    glPushMatrix();
+	    glTranslatef(585-l-r,785-k,0);
+	    glBegin(GL_POLYGON);
+    	glColor3f(0,0,0);
+        for (angle1=1.0f;angle1<360.0f;angle1+=0.2)
+        {
+         xh = sin(angle1)*radius1;
+         yh =cos(angle1)*radius1;
+         glVertex2f(xh,yh);
+        }
+    	  glEnd();
+	      glPopMatrix();
+	      glFlush();
+		}
+		 
+void Object(float l,float r,float k)
+	{ 
+			glColor3f(1,0,0);
+    glBegin(GL_POLYGON);
+	glVertex2f((574-l-r),810-k);
+    glVertex2f((596-l-r),810-k);
+    glVertex2f((596-l-r),790-k);
+    glVertex2f((574-l-r),790-k);
+	glEnd();
+	glColor3f(1,0,0);
+	glBegin(GL_POLYGON);
+	glVertex2f((582-l-r),825-k);
+	glVertex2f((578-l-r),825-k);
+	glVertex2f((578-l-r),810-k);
+    glVertex2f((582-l-r),810-k);
+	glEnd();
+	glColor3f(1,0,0);
+	glBegin(GL_POLYGON);
+	glVertex2f((592-l-r),825-k);
+	glVertex2f((588-l-r),825-k);
+	glVertex2f((588-l-r),810-k);
+    glVertex2f((592-l-r),810-k);
+	glEnd();
+	glPopMatrix();
+	glFlush();
+	
+		  }
+	
+void City(){
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(1000,0,1000,0);
+
+    glBegin(GL_QUADS);
+    glColor3f(0,1,0);
+    glVertex2f(0,0);
+    glVertex2f(0,1000);
+    glVertex2f(1000,1000);
+    glVertex2f(1000,0);
+    glEnd();
+	
+    Road();
+	Sphere(ll,rr,kk);
+	Object(ll,rr,kk);
+	
+    glPushMatrix();
+	for(int j=-1300;j<2150;j+=1050)
+	{
+		glTranslatef(j,0,0);
+			
+			car(-407,590,.2,ll,rr,kk);
+		    car(150,590,.45,ll,rr,kk);
+	        car(500,590,6,ll,rr,kk);
+	       car(802,590,.8,ll,rr,kk);
+	        car(-200,590,.2,ll,rr,kk);
+	     printf("\n\n");
+	       car(52,490,.2,ll,rr,kk);
+	        car(-301,490,.45,ll,rr,kk);
+	        car(200,490,4,6,rr,kk);
+            car(556,490,.8,ll,rr,kk);
+            car(903,490,.2,ll,rr,kk);
+	 printf("\n\n");
+	        car(-203,390,.2,ll,rr,kk);
+	        car(-106,390,.45,ll,rr,kk);
+	        car(501,390,6,ll,rr,kk);
+	        car(987,390,8,ll,rr,kk);
+            car(654,390,.2,ll,rr,kk);
+			 printf("\n\n");
+            car(-500,290,.2,ll,rr,kk);
+		    car(50,290,.45,ll,rr,kk);	
+	        car(-755,290,6,ll,rr,kk);	
+            car(550,290,.8,ll,rr,kk);
+	        car(-200,290,.2,ll,rr,kk);
+			 printf("\n\n");
+           	car(-407,190,.2,ll,rr,kk);
+		    car(150,190,.45,ll,rr,kk);
+	        car(500,190,6,ll,rr,kk);
+	       car(802,190,.8,ll,rr,kk);
+	        car(-200,190,.2,ll,rr,kk);
+			 printf("\n\n");
+            car(0,90,.2,ll,rr,kk);
+            car(-500,90,.45,ll,rr,kk);
+            car(-300,90,6,ll,rr,kk);
+            car(950,90,.8,ll,rr,kk);	
+	        car(-800,90,.2,ll,rr,kk);	
+		 printf("\n\n");
+			car(-500,-10,.2,ll,rr,kk);
+		    car(50,-10,.45,ll,rr,kk);	
+	        car(-755,-10,6,ll,rr,kk);	
+            car(550,-10,.8,ll,rr,kk);
+	        car(-200,-10,.2,ll,rr,kk);
+    	 printf("\n\n"); printf("\n\n"); printf("\n\n");}
+            glPopMatrix(); 
+	       glutSwapBuffers();
+	}
+void Init()
+{
+    glClearColor(0,0,0,0);
+	glColor3f(1.0,0.0,0.0);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(1000,0,1000,0);
+}
+void StartPage(void)
+{
+   	    glClearColor(1.0,1.0,1.0,1.0);
+    	glColor3f(1.0,0.0,0.0);
+    	glMatrixMode(GL_PROJECTION);
+    	glLoadIdentity();
+    	gluOrtho2D(0,1000,0,1000);
+
+    	
+    glBegin(GL_QUADS);
+    glColor3f(1,0,0);
+    glVertex2f(0,0);
+    glColor3f(0.4,0.0,0);
+    glVertex2f(0,1000);
+    glColor3f(0.7,0.0,0);
+    glVertex2f(1000,1000);
+    glColor3f(0.4,0.0,0);
+    glVertex2f(1000,0);
+    glEnd();
+
+
+    glColor3f(0,0,0);
+    	char *a="PRESS SPACE TO CONTINUE";
+        glRasterPos2f( 700 , 250 );
+        for(int i = 0; a[i] !='\0'; i++)
+          glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, a[i]);
+
+		glColor3f(0,0,0);
+    	char *w="PRESS 'w' TO MOVE UP";
+        glRasterPos2f( 400 , 350 );
+        for(int i = 0; w[i] !='\0'; i++)
+          glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, w[i]);
+		glColor3f(0,0,0);
+    	char *l="PRESS 'a' TO MOVE LEFT";
+        glRasterPos2f( 400 , 250 );
+        for(int i = 0; l[i] !='\0'; i++)
+          glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, l[i]);
+		glColor3f(0,0,0);
+    	char *r="PRESS 'd' TO MOVE RIGHT";
+        glRasterPos2f( 400 , 150 );
+        for(int i = 0; r[i] !='\0'; r++)
+          glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, r[i]);
+
+    	
+    glColor3f(0,0,0);
+    	char *b="S.K.M A N U";
+        glRasterPos2f( 150 , 300 );
+        for(int i = 0; b[i] !='\0'; i++)
+          glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, b[i]);
+
+    	
+    glColor3f(0,0,0);
+    	char *c="1 K S 1 2 C S 0 8 3";
+        glRasterPos2f( 150 , 230 );
+        for(int i = 0; c[i] !='\0'; i++)
+          glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c[i]);
+
+
+    	glColor3f(0,0,0);
+    	char *D="C R O S S Y   R O A D";
+        glRasterPos2f( 450 , 800 );
+        for(int i = 0; D[i] !='\0'; i++)
+          glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, D[i]);
+    	int x=225,y=0;
+    	glLineWidth(10);
+    glColor3f(1,1,1);
+    glBegin(GL_LINE_STRIP);
+    glVertex2f(200+x,500+y);
+    glVertex2f(250+x,650+y);
+    glVertex2f(275+x,500+y);
+    glVertex2f(325+x,650+y);
+    glVertex2f(325+x,500+y);
+    glVertex2f(325+x,550+y);
+    glVertex2f(305+x,550+y);
+    glEnd();
+
+    	char *s="Work Hard In Silence,Let Your Success Make Some Noise...";
+        glRasterPos2f(225+325+10,500+y);
+        for(int i = 0; s[i] !='\0'; i++)
+          glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, s[i]);
+
+
+	glutSwapBuffers();
+}
+
+GLvoid Display()
+{
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+if(view==0)
+{
+StartPage();
+}
+  if(view==1)
+	  {
+	City();
+	  }
+}
+
+void Keyboard(GLubyte key, GLint x, GLint y) 
+{
+    switch ( key )    { 			
+	 case ' ':view=1;
+		 Display();
+		  break;
+	 case 'w':	kk+=10;
+		 break;
+	 case 'a':ll-=10;
+		 break;
+     case 'd':rr+=10;
+		 break;
+     default:
+	break;
+	}
+}
+
+int main(int argc, char **argv) 
+{  
+  glutInit(&argc, argv);               /* Initialize GLUT state. */
+  glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB);   
+  glutInitWindowSize(1000,1000);         /* set initial window size. */
+  glutInitWindowPosition(0,0);         /* upper left corner of the screen. */
+  glutCreateWindow("road crosser"); /* Open a window with a title. */ 
+  glutDisplayFunc(Display);        /* Function to do all our OpenGL drawing. */
+  glutKeyboardFunc(Keyboard);         /*Normal key is pressed */
+  Init();
+  glutTimerFunc(10,Update,0);
+  glutMainLoop();                      /* Start Event Processing Engine. */  
+  return 1;
+} 
+
